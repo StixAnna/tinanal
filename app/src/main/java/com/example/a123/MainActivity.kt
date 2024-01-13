@@ -1,18 +1,10 @@
 package com.example.a123
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.TextView
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.example.a123.databinding.ActivityMainBinding
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,21 +14,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        binding.background.setImageResource(R.drawable.photogood)
-        val beh = binding.pane.layoutParams as CoordinatorLayout.LayoutParams
-        (beh.behavior as BottomSheetBehavior).setPeekHeight(300)
-        val name = findViewById<TextView>(R.id.user_name)
-        val description = findViewById<TextView>(R.id.user_description)
-        val gender = findViewById<TextView>(R.id.user_gender)
-        val geoloc = findViewById<TextView>(R.id.user_geoloc)
-        val lastlogin = findViewById<TextView>(R.id.user_lastlogin)
-        val button = findViewById<TextView>(R.id.button)
+        //ниже лежит то что нужно засунуть в ифелс конструкцию проверки авторизации человеткина
+        setContentView(R.layout.activity_auth)
+        val intent = Intent(this, AuthActivity::class.java)
+        startActivity(intent)
 
-        button.setOnClickListener {
 
-        }
+
 
 
     }
