@@ -7,56 +7,83 @@
     android:background="@color/design_default_color_background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+<!--    эта кнопка чисто для тестов-->
     <Button
         android:id="@+id/button_link_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:text="Button"
+        android:layout_marginTop="16dp"
+        android:text="LIKEE_PAGE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+<!--    эта кнопка чисто для тестов-->
 
     <TextView
         android:id="@+id/title_createacc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="150sp"
+        android:layout_marginTop="100sp"
         android:layout_marginBottom="20sp"
         android:text="Create account"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/user_gender_register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <EditText
-        android:id="@+id/user_email"
+        android:id="@+id/user_name_register"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:hint="Email" />
+        android:textColor="@color/black"
+        android:hint="Name" />
     <EditText
-        android:id="@+id/user_login"
+        android:id="@+id/user_tg_register"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:hint="\@Telegram" />
+    <EditText
+        android:id="@+id/user_city_register"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:hint="City" />
+    <Spinner
+        android:id="@+id/user_gender_register"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:entries="@array/Gender_spinner"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+
+    <EditText
+        android:id="@+id/user_login_register"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:ems="10"
         android:inputType="text"
+        android:textColor="@color/black"
         android:hint="Login"  />
     <EditText
-        android:id="@+id/user_pass"
+        android:id="@+id/user_pass_register"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:ems="10"
         android:inputType="textPassword"
+        android:textColor="@color/black"
         android:hint="Pswd"  />
 
     <Button
@@ -70,10 +97,12 @@
 
     <Button
         android:id="@+id/button_link_auth"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:backgroundTintMode="multiply"
+        android:textColor="@color/white"
         android:text="LOGIN_PAGE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
