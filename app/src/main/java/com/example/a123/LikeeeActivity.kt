@@ -43,5 +43,10 @@ class LikeeeActivity : AppCompatActivity() {
         like.setOnClickListener {
             Toast.makeText(this, "like",Toast.LENGTH_SHORT).show()
         }
+        val button_link_settings : TextView = findViewById(R.id.button_link_settings)
+        button_link_settings.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

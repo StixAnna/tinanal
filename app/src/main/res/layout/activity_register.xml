@@ -39,32 +39,6 @@
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
         android:hint="Name" />
-    <EditText
-        android:id="@+id/user_tg_register"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:hint="\@Telegram" />
-    <EditText
-        android:id="@+id/user_city_register"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:hint="City" />
-    <Spinner
-        android:id="@+id/user_gender_register"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:entries="@array/Gender_spinner"
-        android:textColor="@color/black"
-        android:textSize="28sp" />
 
 
     <EditText
@@ -87,7 +61,7 @@
         android:hint="Pswd"  />
 
     <Button
-        android:id="@+id/button_subm_reg"
+        android:id="@+id/btn_cnfrm_setngs"
         android:layout_width="260dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
