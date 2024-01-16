@@ -16,6 +16,9 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
+        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar!!.title = ""
         val button_main_link: TextView = findViewById(R.id.button_link_main)
         val button_reg_link: TextView = findViewById(R.id.button_link_reg)
         val button_auth : Button = findViewById(R.id.button_subm_auth)

@@ -1,5 +1,6 @@
 package com.example.a123
 
+import android.app.ActionBar
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -13,8 +14,9 @@ class RegActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-
-
+        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar!!.title = ""
         val button_main_link : TextView = findViewById(R.id.button_link_main)
         val button_auth_link : TextView = findViewById(R.id.button_link_auth)
         button_main_link.setOnClickListener {

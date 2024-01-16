@@ -5,8 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/design_default_color_background"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:parentActivityName="com.example.myfirstapp.MainActivity" >
 <!--    эта кнопка чисто для тестов-->
+    <!--    эта кнопка чисто для тестов-->
+
     <Button
         android:id="@+id/button_link_main"
         android:layout_width="wrap_content"
@@ -16,7 +19,6 @@
         android:text="LIKEE_PAGE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-<!--    эта кнопка чисто для тестов-->
 
     <TextView
         android:id="@+id/title_createacc"

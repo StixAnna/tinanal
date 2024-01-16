@@ -13,7 +13,9 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
-
+        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        supportActionBar!!.title = "11111111111111111111111"
         val button_main_link : TextView = findViewById(R.id.button_link_main)
         button_main_link.setOnClickListener {
             val intent = Intent(this, LikeeeActivity::class.java)
@@ -39,7 +41,7 @@ class SettingsActivity : AppCompatActivity() {
             if(name == "" || telegram == "" || city == "" || gender == ""|| imgpath == "" || desc == "")
                 Toast.makeText(this, "Заполните все поля!", Toast.LENGTH_LONG).show()
             else{//ELSE ADD TO DB
-                Toast.makeText(this, "**dobavlyaetsya v BD**", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "**chaning info v BD**", Toast.LENGTH_LONG).show()
             }
         }
     }
