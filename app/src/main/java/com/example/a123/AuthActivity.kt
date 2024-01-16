@@ -16,7 +16,7 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
-        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
+//        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
 //        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 //        supportActionBar!!.title = ""
         val button_main_link: TextView = findViewById(R.id.button_link_main)
@@ -37,10 +37,23 @@ class AuthActivity : AppCompatActivity() {
         button_auth.setOnClickListener{
             val login = authlogin.text.toString().trim();
             val pswd = authpswd.text.toString().trim();
-            if(login == "" || pswd == "")
+            if(login == "" || pswd == "") {
+//                val db = dbHelper(this,null)
+//                db.onUpgrade(null, 1,2)
                 Toast.makeText(this, "Заполните все поля!", Toast.LENGTH_LONG).show()
+            }
             else{//запрос к бд на наличие такого челика и редирект на залогиненную версию
-                Toast.makeText(this, "**proverka hashlogina v BD**", Toast.LENGTH_LONG).show()
+                val db = dbHelper(this,null)
+                val isauth = db.getUser(login,pswd)
+
+                if(isauth){
+                    Toast.makeText(this, "**user $login authorized v BD**", Toast.LENGTH_LONG).show()
+                    authlogin.text.clear()
+                    authpswd.text.clear()
+                }
+                else{
+                    Toast.makeText(this, "**user $login not_authorized v BD**", Toast.LENGTH_LONG).show()
+                }
             }
         }
     }

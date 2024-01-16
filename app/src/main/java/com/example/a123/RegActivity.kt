@@ -40,7 +40,16 @@ class RegActivity : AppCompatActivity() {
             if(name == "" || login == "" || pswd == "")
                 Toast.makeText(this, "Заполните все поля!", Toast.LENGTH_LONG).show()
             else{//ELSE ADD TO DB
-                Toast.makeText(this, "**dobavlyaetsya v BD**", Toast.LENGTH_LONG).show()
+                val user = User(login,pswd,name)
+
+                val db = dbHelper(this,null)
+                db.adduser(user)
+
+                Toast.makeText(this, "** $login dobavlyaetsya v BD**", Toast.LENGTH_LONG).show()
+
+                regname.text.clear()
+                reglogin.text.clear()
+                regpswd.text.clear()
             }
         }
 
