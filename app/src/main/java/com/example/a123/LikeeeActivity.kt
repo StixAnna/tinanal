@@ -12,7 +12,6 @@ import com.example.a123.databinding.ActivityLikeeeBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 class LikeeeActivity : AppCompatActivity() {
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityLikeeeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
