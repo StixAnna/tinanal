@@ -3,11 +3,16 @@ package com.example.a123
 import android.app.ActionBar
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONObject
 
 class RegActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,11 +46,7 @@ class RegActivity : AppCompatActivity() {
                 Toast.makeText(this, "Заполните все поля!", Toast.LENGTH_LONG).show()
             else{//ELSE ADD TO DB
                 val user = User(login,pswd,name)
-
-                val db = dbHelper(this,null)
-                db.adduser(user)
-
-                Toast.makeText(this, "** $login dobavlyaetsya v BD**", Toast.LENGTH_LONG).show()
+                Register(login,pswd,name)
 
                 regname.text.clear()
                 reglogin.text.clear()
@@ -53,6 +54,25 @@ class RegActivity : AppCompatActivity() {
             }
         }
 
+    }
+    private fun Register(login: String, password: String, name: String){
+        val url = "http://192.168.88.235:5000/register" +
+                "?Login=$login&Password=$password&Name=$name"
+        val queue = Volley.newRequestQueue(this)
+        val stringRequest = StringRequest(
+            Request.Method.GET,
+            url,
+            {
+                    response->
+                val gObject = JSONObject(response)
+                val res = gObject.getString("result")
+                Toast.makeText(this, "** $login dobavlyaetsya v BD**", Toast.LENGTH_LONG).show()
+            },
+            {
+                Log.d("MyLog","Volley error: $it")
+            }
+        )
+        queue.add(stringRequest)
     }
 
 

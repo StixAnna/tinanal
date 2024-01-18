@@ -3,10 +3,15 @@ package com.example.a123
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import androidx.core.content.contentValuesOf
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONObject
 
-class dbHelper(val context: Context, factory: SQLiteDatabase.CursorFactory?) :
-    SQLiteOpenHelper(context, "app", factory, 1) {
+//class dbHelper(val context: Context, factory: SQLiteDatabase.CursorFactory?) :
+   /* SQLiteOpenHelper(context, "app", factory, 1) {
     override fun onCreate(db: SQLiteDatabase?) {
         val querry = "  CREATE TABLE users (id INT PRIMARY KEY, name TEXT, login TEXT, pswd TEXT," +
                     "   telegram TEXT DEFAULT NULL," +
@@ -37,6 +42,7 @@ class dbHelper(val context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
         val result = db.rawQuery("SELECT * FROM users WHERE login = '$login' AND pswd = '$pswd'", null)
         return result.moveToFirst()
-    }
+    }*/
 
-}
+
+//}
