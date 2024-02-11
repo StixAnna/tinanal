@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/user_name_register"
+        android:id="@+id/user_name_update"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title_createacc" />
 
     <EditText
-        android:id="@+id/user_tg_register"
+        android:id="@+id/user_tg_update"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -60,10 +60,10 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_name_register"/>
+        app:layout_constraintTop_toBottomOf="@+id/user_name_update"/>
 
     <EditText
-        android:id="@+id/user_city_register"
+        android:id="@+id/user_city_update"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -74,26 +74,25 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_tg_register" />
+        app:layout_constraintTop_toBottomOf="@+id/user_tg_update" />
 
-    <EditText
-        android:id="@+id/user_img_add"
+    <Button
+        android:id="@+id/user_img_add_update"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="img1"
-        android:inputType="text"
+        android:text="Imgdwnld"
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_city_register" />
+        app:layout_constraintTop_toBottomOf="@+id/user_city_update" />
 
 
 
     <Spinner
-        android:id="@+id/user_gender_register"
+        android:id="@+id/user_gender_update"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -103,10 +102,10 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_img_add" />
+        app:layout_constraintTop_toBottomOf="@+id/user_img_add_update" />
 
     <EditText
-        android:id="@+id/user_descr"
+        android:id="@+id/user_descr_update"
         android:layout_width="220dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
@@ -117,7 +116,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_gender_register" />
+        app:layout_constraintTop_toBottomOf="@+id/user_gender_update" />
 
     <Button
         android:id="@+id/btn_cnfrm_setngs"
@@ -128,6 +127,6 @@
         android:text="Confirm_changes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_descr" />
+        app:layout_constraintTop_toBottomOf="@+id/user_descr_update" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
